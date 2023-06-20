@@ -1,0 +1,23 @@
+<button class="btn btn-primary" (click)="create()">Novo</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">telefone</th>
+      <th scope="col">endereco</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let empresa of empresas">
+      <th scope="row">{{empresa.id}}</th>
+      <td>{{empresa.name}}</td>
+      <td>{{empresa.email}}</td>
+      <td>
+          <button class="btn btn-primary me-1" (click)="edit(empresa)">Editar</button>
+          <button class="btn btn-primary"      (click)="delete(empresa)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
